@@ -67,16 +67,14 @@ def process_csv(file):
                 f"{weekday_identifiers[i]}: {status}"
                 for i, status in enumerate(week_data[:5])
             ]
-            row.append(
-                "\n".join(formatted_week_data)
-            )  # Only include weekdays (Mon-Fri)
+            row.append("\n".join(formatted_week_data))
         csv_writer.writerow(row)
 
     output.seek(0)
     return output
 
 
-st.title("BeatDapp Official Unofficial")
+st.title("b8y Official Unofficial")
 st.title("🎉 NARC Sheet Generator 🎉")
 
 uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
